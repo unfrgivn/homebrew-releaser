@@ -18,15 +18,7 @@ class Utils:
 
         headers = GITHUB_HEADERS
         if stream:
-<<<<<<< HEAD
-<<<<<<< HEAD
             headers['Accept'] += ',application/octet-stream'
-=======
-            headers['Accept'] += f',application/octet-stream'
->>>>>>> 6325714 (fix: append not replace stream content-type accept header)
-=======
-            headers['Accept'] += ',application/octet-stream'
->>>>>>> 35902cf (refactor: remove unecessary f-string)
 
         try:
             response = requests.get(
