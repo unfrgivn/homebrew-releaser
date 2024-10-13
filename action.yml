@@ -40,6 +40,9 @@ inputs:
   custom_require:
     description: "Allows you to add a custom require_relative at the top of the formula template."
     required: false
+  formula_includes:
+    description: "Allows you to add custom includes at the top of the formula template."
+    required: false
   version:
     description: "Override the automatically detected version of a formula with an explicit value."
     required: false
@@ -76,6 +79,7 @@ runs:
     - ${{ inputs.commit_email }}
     - ${{ inputs.install }}
     - ${{ inputs.test }}
+    - ${{ inputs.formula_includes }}
     - ${{ inputs.target_darwin_amd64 }}
     - ${{ inputs.target_darwin_arm64 }}
     - ${{ inputs.target_linux_amd64 }}
